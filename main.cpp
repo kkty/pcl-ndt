@@ -30,7 +30,8 @@ int main(int argc, char **argv) {
   std::cerr << "target_size = " << target_cloud->size()
             << ", input_size = " << input_cloud->size() << std::endl;
 
-  std::cout << "elapsed_init,elapsed_align,converged,score" << std::endl;
+  std::cout << "elapsed_init,elapsed_align,converged,score,iterations"
+            << std::endl;
 
   for (int i = 0; i < N; i++) {
     double elapsed_init = 0, elapsed_align = 0;
@@ -67,8 +68,8 @@ int main(int argc, char **argv) {
     }
 
     std::cout << elapsed_init << "," << elapsed_align << ","
-              << ndt.hasConverged() << "," << ndt.getFitnessScore()
-              << std::endl;
+              << ndt.hasConverged() << "," << ndt.getFitnessScore() << ","
+              << ndt.getFinalNumIteration() << std::endl;
   }
 
   return 0;
