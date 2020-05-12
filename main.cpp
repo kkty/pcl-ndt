@@ -7,7 +7,7 @@
 #include <iostream>
 #include <thread>
 
-#define N 100
+#define N 10
 
 int main(int argc, char **argv) {
   if (argc != 3)
